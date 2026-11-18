@@ -17,7 +17,7 @@ function showService(index) {
   current = (index + services.length) % services.length;
   const [file, category, title, description, alt, request] = services[current];
   buttons.forEach((button, position) => button.setAttribute('aria-pressed', String(position === current)));
-  image.src = 'imagens/' + file + '.webp';
+  image.src = file + '.webp';
   image.alt = alt;
   document.querySelector('#service-category').textContent = category;
   document.querySelector('#service-title').textContent = title;
